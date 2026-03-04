@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAERO | Official</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Montserrat', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    border-bottom:1px solid #111;
+}
+
+nav img{
+    height:32px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:40px;
+    font-size:0.8rem;
+    letter-spacing:3px;
+}
+
+nav ul li:hover{
+    opacity:0.5;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero-logo{
+    width:240px;
+    margin-bottom:40px;
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:4rem;
+    letter-spacing:10px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:600px;
+    opacity:0.6;
+    margin-bottom:40px;
+    font-weight:300;
+}
+
+.hero button{
+    padding:14px 35px;
+    background:transparent;
+    border:1px solid #fff;
+    color:#fff;
+    letter-spacing:3px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.hero button:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* SECTIONS */
+
+section{
+    padding:140px 8%;
+    text-align:center;
+    border-top:1px solid #111;
+}
+
+.section-title{
+    font-size:2rem;
+    letter-spacing:5px;
+    margin-bottom:30px;
+}
+
+.section-text{
+    max-width:700px;
+    margin:auto;
+    opacity:0.6;
+    font-weight:300;
+}
+
+/* PRODUCT PREVIEW */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:40px;
+    margin-top:60px;
+}
+
+.product-card{
+    border:1px solid #111;
+    padding:40px;
+    transition:0.3s ease;
+}
+
+.product-card:hover{
+    border:1px solid #fff;
+    transform:translateY(-5px);
+}
+
+.product-card h3{
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+.product-card p{
+    opacity:0.5;
+    font-size:0.9rem;
+}
+
+/* EMAIL */
+
+.email-box{
+    margin-top:50px;
+}
+
+.email-box input{
+    padding:14px;
+    width:260px;
+    background:#000;
+    border:1px solid #fff;
+    color:#fff;
+    outline:none;
+}
+
+.email-box button{
+    padding:14px 30px;
+    border:none;
+    background:#fff;
+    color:#000;
+    cursor:pointer;
+    letter-spacing:2px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px;
+    text-align:center;
+    font-size:0.75rem;
+    opacity:0.4;
+    border-top:1px solid #111;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    nav ul{
+        gap:20px;
+        font-size:0.7rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <img src="logo.png" alt="KAERO Logo">
+    <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#vision">VISION</a></li>
+        <li><a href="#drop">DROP</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="logo.png" class="hero-logo" alt="KAERO Symbol">
+
+    <h1>KAERO</h1>
+
+    <p>
+        A monochrome identity built on restraint, precision, and presence.
+        No noise. No compromise.
+    </p>
+
+    <button onclick="document.getElementById('drop').scrollIntoView()">
+        ENTER
+    </button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">ABOUT KAERO</h2>
+    <p class="section-text">
+        KAERO is an emerging independent label focused on controlled minimalism
+        and sharp visual identity. Every piece is designed with intention —
+        stripped of excess, driven by form and contrast.
+    </p>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+    <h2 class="section-title">OUR VISION</h2>
+    <p class="section-text">
+        We are building more than garments.
+        We are building a language — a culture rooted in discipline,
+        silhouette, and quiet dominance.
+    </p>
+</section>
+
+<!-- FIRST DROP -->
+<section id="drop">
+    <h2 class="section-title">FIRST DROP</h2>
+
+    <p class="section-text">
+        The first KAERO collection is currently in development.
+        Limited release. Precision cut. Structured forms.
+    </p>
+
+    <div class="products">
+        <div class="product-card">
+            <h3>KAERO TEE 01</h3>
+            <p>Premium heavyweight cotton. Structured fit.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>KAERO HOOD 01</h3>
+            <p>Minimal branding. Engineered silhouette.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>KAERO CAP 01</h3>
+            <p>Monochrome embroidery. Limited run.</p>
+        </div>
+    </div>
+
+    <div class="email-box">
+        <input type="email" placeholder="Enter your email">
+        <button>NOTIFY</button>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 KAERO. All Rights Reserved.
+</footer>
+
+</body>
+</html>
